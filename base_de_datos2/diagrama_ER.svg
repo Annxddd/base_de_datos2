@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="780" font-family="Arial, sans-serif">
+  <rect width="1100" height="780" fill="#F5F0E8"/>
+  
+  <!-- Title -->
+  <text x="550" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#8B6914">Sistema de Gestión Legal — Diagrama Entidad-Relación</text>
+  <line x1="80" y1="48" x2="1020" y2="48" stroke="#8B6914" stroke-width="2"/>
+
+  <!-- ROLES table -->
+  <rect x="30" y="65" width="160" height="110" rx="6" fill="white" stroke="#8B6914" stroke-width="2"/>
+  <rect x="30" y="65" width="160" height="30" rx="6" fill="#8B6914"/>
+  <rect x="30" y="87" width="160" height="8" fill="#8B6914"/>
+  <text x="110" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="white">ROLES</text>
+  <text x="40" y="115" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="40" y="132" font-size="11" fill="#333">nombre (UNIQUE)</text>
+  <text x="40" y="149" font-size="11" fill="#333">descripcion</text>
+  <text x="40" y="166" font-size="11" fill="#333">created_at</text>
+
+  <!-- USUARIOS table -->
+  <rect x="230" y="55" width="180" height="190" rx="6" fill="white" stroke="#8B6914" stroke-width="2"/>
+  <rect x="230" y="55" width="180" height="30" rx="6" fill="#8B6914"/>
+  <rect x="230" y="77" width="180" height="8" fill="#8B6914"/>
+  <text x="320" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="white">USUARIOS</text>
+  <text x="240" y="105" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="240" y="122" font-size="11" fill="#333">usuario (UNIQUE)</text>
+  <text x="240" y="139" font-size="11" fill="#333">password_hash</text>
+  <text x="240" y="156" font-size="11" fill="#333">nombre_completo</text>
+  <text x="240" y="173" font-size="11" fill="#333">email</text>
+  <text x="240" y="190" font-size="11" fill="#C00">🔗 rol_id (FK)</text>
+  <text x="240" y="207" font-size="11" fill="#333">activo</text>
+  <text x="240" y="224" font-size="11" fill="#333">created_at</text>
+
+  <!-- ASEGURADORAS table -->
+  <rect x="440" y="55" width="180" height="190" rx="6" fill="white" stroke="#8B6914" stroke-width="2"/>
+  <rect x="440" y="55" width="180" height="30" rx="6" fill="#8B6914"/>
+  <rect x="440" y="77" width="180" height="8" fill="#8B6914"/>
+  <text x="530" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="white">ASEGURADORAS</text>
+  <text x="450" y="105" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="450" y="122" font-size="11" fill="#333">codigo (UNIQUE)</text>
+  <text x="450" y="139" font-size="11" fill="#333">nombre</text>
+  <text x="450" y="156" font-size="11" fill="#333">ruc</text>
+  <text x="450" y="173" font-size="11" fill="#333">telefono</text>
+  <text x="450" y="190" font-size="11" fill="#333">email</text>
+  <text x="450" y="207" font-size="11" fill="#333">activa</text>
+  <text x="450" y="224" font-size="11" fill="#333">created_at</text>
+
+  <!-- JUZGADOS table -->
+  <rect x="650" y="55" width="180" height="170" rx="6" fill="white" stroke="#8B6914" stroke-width="2"/>
+  <rect x="650" y="55" width="180" height="30" rx="6" fill="#8B6914"/>
+  <rect x="650" y="77" width="180" height="8" fill="#8B6914"/>
+  <text x="740" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="white">JUZGADOS</text>
+  <text x="660" y="105" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="660" y="122" font-size="11" fill="#333">nombre (UNIQUE)</text>
+  <text x="660" y="139" font-size="11" fill="#333">ubicacion</text>
+  <text x="660" y="156" font-size="11" fill="#333">ciudad</text>
+  <text x="660" y="173" font-size="11" fill="#333">activo</text>
+  <text x="660" y="190" font-size="11" fill="#333">created_at</text>
+
+  <!-- ESTADOS_EXPEDIENTE -->
+  <rect x="880" y="55" width="185" height="130" rx="6" fill="white" stroke="#8B6914" stroke-width="2"/>
+  <rect x="880" y="55" width="185" height="30" rx="6" fill="#8B6914"/>
+  <rect x="880" y="77" width="185" height="8" fill="#8B6914"/>
+  <text x="972" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="white">ESTADOS_EXPEDIENTE</text>
+  <text x="890" y="105" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="890" y="122" font-size="11" fill="#333">nombre (UNIQUE)</text>
+  <text x="890" y="139" font-size="11" fill="#333">color</text>
+  <text x="890" y="156" font-size="11" fill="#333">icono</text>
+
+  <!-- CLIENTES table -->
+  <rect x="30" y="320" width="180" height="190" rx="6" fill="white" stroke="#8B6914" stroke-width="2"/>
+  <rect x="30" y="320" width="180" height="30" rx="6" fill="#8B6914"/>
+  <rect x="30" y="342" width="180" height="8" fill="#8B6914"/>
+  <text x="120" y="341" text-anchor="middle" font-size="13" font-weight="bold" fill="white">CLIENTES</text>
+  <text x="40" y="369" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="40" y="386" font-size="11" fill="#333">nombre</text>
+  <text x="40" y="403" font-size="11" fill="#333">cedula (UNIQUE)</text>
+  <text x="40" y="420" font-size="11" fill="#333">telefono</text>
+  <text x="40" y="437" font-size="11" fill="#333">email</text>
+  <text x="40" y="454" font-size="11" fill="#333">direccion</text>
+  <text x="40" y="471" font-size="11" fill="#333">created_at</text>
+  <text x="40" y="488" font-size="11" fill="#333">updated_at</text>
+
+  <!-- EXPEDIENTES table (central) -->
+  <rect x="330" y="310" width="200" height="250" rx="6" fill="white" stroke="#D4A017" stroke-width="3"/>
+  <rect x="330" y="310" width="200" height="30" rx="6" fill="#D4A017"/>
+  <rect x="330" y="332" width="200" height="8" fill="#D4A017"/>
+  <text x="430" y="331" text-anchor="middle" font-size="13" font-weight="bold" fill="white">EXPEDIENTES</text>
+  <text x="340" y="359" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="340" y="376" font-size="11" fill="#333">numero_expediente (UQ)</text>
+  <text x="340" y="393" font-size="11" fill="#C00">🔗 cliente_id (FK)</text>
+  <text x="340" y="410" font-size="11" fill="#C00">🔗 aseguradora_id (FK)</text>
+  <text x="340" y="427" font-size="11" fill="#C00">🔗 juzgado_id (FK)</text>
+  <text x="340" y="444" font-size="11" fill="#C00">🔗 usuario_asignado_id (FK)</text>
+  <text x="340" y="461" font-size="11" fill="#C00">🔗 estado_id (FK)</text>
+  <text x="340" y="478" font-size="11" fill="#333">descripcion</text>
+  <text x="340" y="495" font-size="11" fill="#333">fecha_inicio</text>
+  <text x="340" y="512" font-size="11" fill="#333">fecha_cierre</text>
+  <text x="340" y="529" font-size="11" fill="#333">monto_reclamado</text>
+  <text x="340" y="546" font-size="11" fill="#333">created_at</text>
+
+  <!-- AGENDA table -->
+  <rect x="620" y="310" width="200" height="250" rx="6" fill="white" stroke="#8B6914" stroke-width="2"/>
+  <rect x="620" y="310" width="200" height="30" rx="6" fill="#8B6914"/>
+  <rect x="620" y="332" width="200" height="8" fill="#8B6914"/>
+  <text x="720" y="331" text-anchor="middle" font-size="13" font-weight="bold" fill="white">AGENDA</text>
+  <text x="630" y="359" font-size="11" fill="#333">🔑 id (PK)</text>
+  <text x="630" y="376" font-size="11" fill="#C00">🔗 expediente_id (FK)</text>
+  <text x="630" y="393" font-size="11" fill="#333">fecha</text>
+  <text x="630" y="410" font-size="11" fill="#333">hora</text>
+  <text x="630" y="427" font-size="11" fill="#333">descripcion</text>
+  <text x="630" y="444" font-size="11" fill="#C00">🔗 juzgado_id (FK)</text>
+  <text x="630" y="461" font-size="11" fill="#C00">🔗 usuario_responsable_id (FK)</text>
+  <text x="630" y="478" font-size="11" fill="#333">completada</text>
+  <text x="630" y="495" font-size="11" fill="#333">created_at</text>
+
+  <!-- RELATIONSHIP LINES -->
+  <!-- ROLES -> USUARIOS -->
+  <line x1="190" y1="120" x2="230" y2="140" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="192" y="113" font-size="10" fill="#666">1</text>
+  <text x="218" y="137" font-size="10" fill="#666">N</text>
+
+  <!-- USUARIOS -> EXPEDIENTES (usuario_asignado) -->
+  <line x1="320" y1="160" x2="430" y2="310" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="350" y="230" font-size="10" fill="#666">asignado</text>
+
+  <!-- ASEGURADORAS -> EXPEDIENTES -->
+  <line x1="530" y1="245" x2="480" y2="310" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="485" y="283" font-size="10" fill="#666">1:N</text>
+
+  <!-- JUZGADOS -> EXPEDIENTES -->
+  <line x1="700" y1="225" x2="500" y2="380" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- ESTADOS -> EXPEDIENTES -->
+  <line x1="930" y1="185" x2="530" y2="430" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="760" y="320" font-size="10" fill="#666">1:N</text>
+
+  <!-- CLIENTES -> EXPEDIENTES -->
+  <line x1="210" y1="415" x2="330" y2="410" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="252" y="407" font-size="10" fill="#666">1:N</text>
+
+  <!-- EXPEDIENTES -> AGENDA -->
+  <line x1="530" y1="430" x2="620" y2="400" stroke="#D4A017" stroke-width="2"/>
+  <text x="555" y="407" font-size="10" fill="#666">1:N</text>
+
+  <!-- JUZGADOS -> AGENDA -->
+  <line x1="740" y1="225" x2="730" y2="310" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- USUARIOS -> AGENDA (responsable) -->
+  <line x1="320" y1="200" x2="680" y2="460" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Legend -->
+  <rect x="30" y="650" width="500" height="110" rx="8" fill="white" stroke="#8B6914" stroke-width="1.5"/>
+  <text x="280" y="672" text-anchor="middle" font-size="12" font-weight="bold" fill="#8B6914">Leyenda</text>
+  <line x1="50" y1="695" x2="100" y2="695" stroke="#8B6914" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="110" y="699" font-size="11" fill="#333">Relación FK (uno a muchos)</text>
+  <line x1="50" y1="718" x2="100" y2="718" stroke="#D4A017" stroke-width="2.5"/>
+  <text x="110" y="722" font-size="11" fill="#333">Relación principal (Expediente → Agenda)</text>
+  <text x="50" y="742" font-size="11" fill="#C00">🔗 FK</text>
+  <text x="80" y="742" font-size="11" fill="#333">= Clave Foránea</text>
+  <text x="200" y="742" font-size="11" fill="#333">🔑 PK = Clave Primaria</text>
+  <text x="50" y="758" font-size="11" fill="#333">UQ = UNIQUE constraint</text>
+
+  <!-- Tech stack -->
+  <rect x="560" y="650" width="500" height="110" rx="8" fill="white" stroke="#8B6914" stroke-width="1.5"/>
+  <text x="810" y="672" text-anchor="middle" font-size="12" font-weight="bold" fill="#8B6914">Stack Tecnológico</text>
+  <text x="580" y="695" font-size="11" fill="#333">🐍 Python 3.11 + Flask 3.0</text>
+  <text x="580" y="713" font-size="11" fill="#333">🗄️ SQLAlchemy ORM + SQLite</text>
+  <text x="580" y="731" font-size="11" fill="#333">🔐 Flask-JWT-Extended (autenticación)</text>
+  <text x="580" y="749" font-size="11" fill="#333">🌐 Flask-CORS (API REST)</text>
+  <text x="580" y="767" font-size="11" fill="#333">🔒 Werkzeug (hash de contraseñas)</text>
+</svg>
